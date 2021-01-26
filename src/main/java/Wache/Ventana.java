@@ -109,6 +109,7 @@ public class Ventana{
         txtPass.setFont(new Font("verdana", Font.ITALIC, 12));
         txtPass.setForeground(Color.GRAY);
         txtPass.setBorder(BorderFactory.createLineBorder(Color.gray, 1, false));
+        txtPass.putClientProperty("JPasswordField.cutCopyAllowed",true); //PERMITIR COPIAR EL PASS
         
         txtPass.setAlignmentX(panelPass.CENTER_ALIGNMENT);
         
