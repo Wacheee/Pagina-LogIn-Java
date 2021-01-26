@@ -5,11 +5,13 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -131,8 +133,23 @@ public class Ventana{
         //panel1.setBorder(BorderFactory.createLineBorder(Color.black, 5, false));
         //panel1.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         
+        
+        //Logo
+
+        ImageIcon logo = new ImageIcon("Logo-1.png");
+        JLabel imagen = new JLabel();
+        imagen.setSize(124, 141);
+        imagen.setAlignmentX(panel1.CENTER_ALIGNMENT);
+        
+        
+        imagen.setIcon(new ImageIcon(logo.getImage().getScaledInstance(124, 141, Image.SCALE_SMOOTH))); //cON ESTE METODO puedo REESCALAR LA IMAGEN
+        
+        
+        
         panel1.add(Box.createRigidArea(new Dimension(0,40))); //Para separar componentes
         panel1.add(titulo, BorderLayout.CENTER);
+        panel1.add(Box.createVerticalGlue());
+        panel1.add(imagen, BorderLayout.PAGE_START);
         panel1.add(Box.createVerticalGlue());
         panel1.add(panelNom, BorderLayout.CENTER);
         panel1.add(Box.createRigidArea(new Dimension(0,20)));
