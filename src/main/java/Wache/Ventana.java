@@ -143,13 +143,13 @@ public class Ventana{
         
         //Logo
 
-        ImageIcon logo = new ImageIcon("Logo-1.png");
-        JLabel imagen = new JLabel();
-        imagen.setSize(124, 141);
+        ImageIcon logo = new ImageIcon("Logo-1.png"); //Creo primero el Icon 
+        JLabel imagen = new JLabel(); //Luego JLABEL
+        imagen.setSize(124, 141); //Le doy dimensiones al JLabel
         imagen.setAlignmentX(panel1.CENTER_ALIGNMENT);
         
         
-        imagen.setIcon(new ImageIcon(logo.getImage().getScaledInstance(124, 141, Image.SCALE_SMOOTH))); //cON ESTE METODO puedo REESCALAR LA IMAGEN
+        imagen.setIcon(new ImageIcon(logo.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH))); //cON ESTE METODO puedo REESCALAR LA IMAGEN al tamaño de JLAbel
         
         
         
